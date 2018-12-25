@@ -1,0 +1,22 @@
+<h2 id="result"></h2>
+<script>
+var DAYSTART = new Date('2017/03/31 23:59:50');
+var DAYEND   = new Date('2017/04/01 00:00:00');
+var INTERVAL = 1000;
+var calc = new Date(+DAYEND - DAYSTART + INTERVAL);
+function countdownTimer() {
+  var addZero = function(n) { return ('0' + n).slice(-2); }
+  if (+new Date(calc) <= INTERVAL) {
+    document.getElementById('result').textContent = '終了しました。';
+  } else {
+    calc = new Date(+new Date(calc) - INTERVAL);
+    var date = calc.getUTCDate() - 1 ? calc.getUTCDate() - 1 + '日' : '';
+    var hours = calc.getUTCHours() ? calc.getUTCHours() + '時間' : '';
+    var minutes = addZero(calc.getUTCMinutes()) + '分';
+    var seconds = addZero(calc.getUTCSeconds()) + '秒';
+    document.getElementById('result').textContent = date + hours + minutes + seconds;
+  }
+}
+countdownTimer();
+setInterval(function() { countdownTimer() }, INTERVAL);
+</script>
