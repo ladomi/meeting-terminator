@@ -21,9 +21,6 @@ docker cp $(pwd)/se/bomb1.mp3 mita_nginx:/usr/share/nginx/html/bomb1.mp3
 # docker exec -it mita_nginx /bin/bash
 
 << comment
-docker stop test_nginx
-docker rm test_nginx
-docker rmi nginx:centos
 comment
 
 echo ${script_name} finished at $(date)
