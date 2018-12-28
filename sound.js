@@ -42,7 +42,7 @@ var playSound = function(buffer) {
 // main
 window.onload = function() {  
   // サウンドを読み込む
-  getAudioBuffer('bomb1.mp3', function(buffer) {
+  getAudioBuffer('se/bomb1.mp3', function(buffer) {
     // 読み込み完了後にボタンにクリックイベントを登録
     var btn = document.getElementById('btn');
     btn.onclick = function() {

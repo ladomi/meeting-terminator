@@ -1,22 +1,44 @@
-<!doctype html>
-
-<html>  
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-
-    <title>Meeting Terminator</title>
-    <meta name="description" content="html5,webaudioapi,javascript" />
-    <style>
-    #btn {
-      font-size: 4rem;
-      padding: 1rem 2rem;
-    }
-    </style>
-    <script src='sound.js'></script>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <meta name="viewport" content="width=device-width, user-scalable=no" /> -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Meeting Terminator</title>
+  <meta name="description" content="html5,webaudioapi,javascript" />
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
-    <button id='btn'>Bomb</button>
-  </body>
-</html> 
+    
+    <!-- <h1>Hello, world!</h1> -->
+<!-- <header style="background-color:gray">Header</header>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2" style="background-color:red;">Red</div>
+    <div class="col-sm-8" style="background-color:blue;">Blue</div>
+    <div class="col-sm-2" style="background-color:yellow;">Yellow</div>
+  </div>
+</div>
+-->
+<div class="text-center">
+  <h1>Meeting Terminator 3</h1>
+  <button type="button" class="btn btn-primary btn-lg" id="btn">Sound Test</button>
+</div>
+<!-- <footer style="background-color:gray">Footer</footer>
+-->    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src='sound.js'></script>
+</body>
+</html>
