@@ -10,11 +10,14 @@ echo working directory is ${script_dir}
 bash docker_nginx_remove.sh
 
 docker run -itd -p 10080:80 --name mita_nginx nginx
-# docker run -itd -p 80:80 -v $(pwd)/html:/usr/share/nginx/html --name mita_nginx nginx
+
+docker exec -it mita_nginx apt-get update
+docker exec -it mita_nginx apt-get install unzip
 
 bash docker_nginx_cp.sh
 
 << comment
+docker exec -it mita_nginx /bin/bash
 comment
 
 echo ${script_name} finished at $(date)

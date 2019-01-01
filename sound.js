@@ -2,8 +2,8 @@
  * main.js
  */
 
-window.AudioContext = window.AudioContext || window.webkitAudioContext;  
-var context = new AudioContext();
+ window.AudioContext = window.AudioContext || window.webkitAudioContext;  
+ var context = new AudioContext();
 
 // Audio 用の buffer を読み込む
 var getAudioBuffer = function(url, fn) {  
@@ -44,10 +44,13 @@ window.onload = function() {
   // サウンドを読み込む
   getAudioBuffer('se/bomb1.mp3', function(buffer) {
     // 読み込み完了後にボタンにクリックイベントを登録
-    var btn = document.getElementById('btn');
-    btn.onclick = function() {
+    // var btn = document.getElementById('btn');
+    var btns = document.getElementsByName('btn-sound-test');
+    btns.forEach(function(btn){
+      btn.onclick  = function() {
       // サウンドを再生
       playSound(buffer);
-    };
+      }
+    })
   });
 };
